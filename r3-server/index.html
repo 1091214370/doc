@@ -1,0 +1,162 @@
+<!-- create by xch  2018/7/20 -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="/doc/img/favicon.ico">
+  <title>文档中心</title>
+  <link rel="stylesheet" href="/doc/css/style.css">
+<link rel="stylesheet" href="/doc/css/hightlight.css">
+  <script src="/doc/script/script.js"></script>
+</head>
+<body>
+  
+
+  <!-- create by xch  2018/7/20 -->
+<header class="header">
+  <nav class="nav"></nav>
+  <div class="top">
+    <a href="/doc/">
+      <div class="logo">
+        <img 0="l" 1="o" 2="g" 3="o" src="/doc/img/logo.png">
+      </div>
+    </a>
+    <div class="links">
+      <ul class="menu-ul">
+        
+          <li class="menu-item">
+            <a href="/doc/" class="menu-item-link">首页</a>
+          </li>
+        
+          <li class="menu-item">
+            <a href="/doc/g1-Hello-Word" class="menu-item-link">文档</a>
+          </li>
+        
+        </ul>
+    </div>
+  </div>
+</header>
+    
+<div class="main">
+  <div class="slider">
+    
+<div class="tree">
+  <div class="widget">
+    <h2 class="title">目 录</h2>
+    <div class="list">
+    
+          <div id='cjjy4g62j000238sc3pd5b86c' class='item-line'>hexo入门教程
+            
+                <a href='/doc/r2-git/' id='cjjy4g62b000038scordvo2x3' class='item-link'>部署到git服务器</a>
+              
+                <a href='/doc/r1-local/' id='cjjy4g62g000138scj1pzyhjp' class='item-link'>本地环境搭建</a>
+              
+                <a href='/doc/r3-server/' id='cjjy4g62l000338scyv1fsnz5' class='item-link'>部署到自己服务器</a>
+              
+            
+          </div>
+        
+      
+          <div id='cjjy4g62r000838scacckteai' class='item-line'>概述
+            
+                <a href='/doc/g1-Hello-Word/' id='cjjy4g62m000438sch3a7e47p' class='item-link'>Hello-Word</a>
+              
+            
+          </div>
+        
+      
+    
+    </div>
+  </div>
+</div>
+  </div>
+  <div class="content" id="content">
+    <article class='post'>
+  <div class='bread'></div>
+  <h1 class='title'>部署到自己服务器</h1>
+  <div class="article-entry" itemprop="articleBody">
+    <p>我服务器环境是centos7+Apache，只需要将编译好的静态文件上传至Apache服务的根目录下，即算完成。我们可以借助ftp来实现。</p>
+<h3><span id="zhu-jiao-deng-chang">主角登场</span><a href="#zhu-jiao-deng-chang" class="header-anchor">#</a></h3><p>安装 <code>hexo-deployer-ftpsynct</code></p>
+<p><code>npm install hexo-deployer-ftpsync --save</code></p>
+<p>修改配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: ftpsync</span><br><span class="line">  host: &lt;host&gt;</span><br><span class="line">  user: &lt;user&gt;</span><br><span class="line">  pass: &lt;password&gt;</span><br><span class="line">  remote: [remote]</span><br><span class="line">  port: [port]</span><br><span class="line">  ignore: [ignore]</span><br><span class="line">  connections: [connections]</span><br><span class="line">  verbose: [true|false]</span><br></pre></td></tr></table></figure></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>host</td>
+<td>远程主机的地址</td>
+<td></td>
+</tr>
+<tr>
+<td>user</td>
+<td>使用者名称</td>
+<td></td>
+</tr>
+<tr>
+<td>pass</td>
+<td>密码</td>
+<td></td>
+</tr>
+<tr>
+<td>remote</td>
+<td>远程主机根目录</td>
+<td>/</td>
+</tr>
+<tr>
+<td>port</td>
+<td>端口</td>
+<td>21</td>
+</tr>
+<tr>
+<td>ignore</td>
+<td>忽略的文件或目录</td>
+<td></td>
+</tr>
+<tr>
+<td>connections</td>
+<td>使用的连接数</td>
+<td>1</td>
+</tr>
+<tr>
+<td>verbose</td>
+<td>显示调试信息</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<p>在_config.yml里面添加配置，然后执行<code>hexo clean &amp;&amp; hexo g -d</code> 便可以将编译后的静态文件提交到git服务器。</p>
+<h3><span id="bu-shu-dao-fu-wu-qi">部署到服务器</span><a href="#bu-shu-dao-fu-wu-qi" class="header-anchor">#</a></h3><p>以我个人配置为例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">type: ftpsync</span><br><span class="line">host: 47.104.188.184</span><br><span class="line">user: userName</span><br><span class="line">pass: ***********</span><br><span class="line">remote: /home/ftpUpload/doc</span><br><span class="line">port: 21</span><br><span class="line">ignore: </span><br><span class="line">connections: </span><br><span class="line">verbose: false</span><br></pre></td></tr></table></figure></p>
+<p>执行<code>hexo clear &amp;&amp; hexo g -d</code>，系统会自动的将public文件夹里的内容提交到配置好目录。</p>
+<blockquote>
+<p>FTP部署可能出现的问题：<br>您可能需要预先通过其他方式将所有文件上传到远程主机中。否则初次使用ftpsync插件就可能出现报错。另外，由于FTP协议的特征，它每传送一个文件就需要一次握手，相对速度较慢。</p>
+</blockquote>
+<p>我使用的是阿里云服务器，需要安装ftp，如果你也需要，请点击<a href="https://blog.csdn.net/Han_Wen2015/article/details/76794842" target="_blank" rel="noopener">这里</a>。</p>
+<p>我需要开放21端口：<br><code>iptables -A INPUT -ptcp --dport 21 -j ACCEPT</code>，如果你不确认是否一打开21端口，可以通过<code>netstat -anp</code>查看。</p>
+<p><strong>值得注意的一个地方：配置文件里面的host只需要填写ip，不需要携带协议名称。</strong>刚开始，一直提交不成功，知道吧协议名称去掉，呜呜呜。。。</p>
+
+  </div>
+  <div class='page'>
+    <div class='pageBox pageNext'>
+      
+        <a href='/doc/r2-git/'>上一篇：部署到git服务器</a>
+      
+    </div>
+    <div class='pageBox pagePrev'>
+      
+    </div>
+  </div>
+</article>
+  </div>
+</div>
+<!-- create by xch  2018/7/20 -->
+  <footer class="footer"></footer>
+</body>
+</html>
