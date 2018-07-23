@@ -123,10 +123,10 @@ a {
   width: 49.5%;
 }
 .main .content .page .pagePrev {
-  text-align: left;
+  text-align: right;
 }
 .main .content .page .pageNext {
-  text-align: right;
+  text-align: left;
 }
 .footer {
   width: 100%;
