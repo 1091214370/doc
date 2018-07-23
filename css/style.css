@@ -114,11 +114,13 @@ a {
 }
 .main .content .page a {
   color: #ccc;
-  display: inline-block;
-  width: 49.5%;
 }
 .main .content .page a:hover {
   color: #108EE9!important;
+}
+.main .content .page .pageBox {
+  display: inline-block;
+  width: 49.5%;
 }
 .main .content .page .pagePrev {
   text-align: left;
