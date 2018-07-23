@@ -27,11 +27,11 @@
       <ul class="menu-ul">
         
           <li class="menu-item">
-            <a href="/doc/" class="menu-item-link">Home</a>
+            <a href="/doc/" class="menu-item-link">首页</a>
           </li>
         
           <li class="menu-item">
-            <a href="/doc/hello-world/" class="menu-item-link">Docs</a>
+            <a href="/doc/hello-world/" class="menu-item-link">文档</a>
           </li>
         
         </ul>
@@ -45,31 +45,21 @@
     <h2 class="title">目 录</h2>
     <div class="list">
     
-          <div id='cjjxle89i0002fgsc4y9m67ox' class='item-line'>Hello World
+          <div id='cjjxpnjk70002lcscwqhj3znm' class='item-line'>hexo入门教程
             
-                <a href='/doc/hello-world/' id='cjjxle89a0000fgscsp3idqle' class='item-link'>Hello World</a>
+                <a href='/doc/git/' id='cjjxpnjk00000lcscxli75cbv' class='item-link'>hexo入门教程--部署到git服务器</a>
               
-                <a href='/doc/hello/' id='cjjxle89q0008fgscj5eqtf4v' class='item-link'>Hello</a>
+                <a href='/doc/local/' id='cjjxpnjk90003lcscaihg33e5' class='item-link'>hexo入门教程--本地环境搭建</a>
               
-            
-          </div>
-        
-      
-          <div id='cjjxle89p0007fgscvns0i5n6' class='item-line'>hexo入门教程--本地环境搭建
-            
-                <a href='/doc/hexo入门教程-本地环境搭建/' id='cjjxle89f0001fgsccyvcwi92' class='item-link'>hexo入门教程--本地环境搭建</a>
-              
-                <a href='/doc/test-text/' id='cjjxle89m0005fgscd1iqmxqp' class='item-link'>test-text</a>
+                <a href='/doc/server/' id='cjjxpnjkb0004lcsc89k7s8fl' class='item-link'>hexo入门教程--部署到自己服务器</a>
               
             
           </div>
         
       
-          <div id='cjjxle89s000bfgsczv0t7pr4' class='item-line'>测试一级目录文档
+          <div id='cjjxpnjkd0006lcscxnyddxmo' class='item-line'>Hello World
             
-                <a href='/doc/test/' id='cjjxle89k0003fgscc8p09v20' class='item-link'>test</a>
-              
-                <a href='/doc/三级目录/' id='cjjxle89o0006fgsci7ok2bik' class='item-link'>三级目录</a>
+                <a href='/doc/hello-world/' id='cjjxpnjk50001lcsc3549v5fk' class='item-link'>Hello World</a>
               
             
           </div>
@@ -85,13 +75,10 @@
   <div class='bread'></div>
   <h1 class='title'>hexo入门教程--本地环境搭建</h1>
   <div class="article-entry" itemprop="articleBody">
-    <h2><span id="p-jian-jie"> 简介</span><a href="#p-jian-jie" class="header-anchor">#</a></h2>
-<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+    <h2><span id="jian-jie">简介</span><a href="#jian-jie" class="header-anchor">#</a></h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
 <p>由于生成的是纯静态文件，所以你可以直接放在github上面，把github当做自己的服务器使用，比如<a href="https://1091214370.github.io/doc/" target="_blank" rel="noopener">这里</a>。当然也可以直接部署到服务器上面，比如<a href="http://47.104.188.184:8080/doc/">这里</a>，算上本篇文章将有三篇文章详细的介绍hexo环境本地搭建以及部署到github和自己服务器的详细步骤。</p>
-<h2><span id="p-ben-di-huan-jing-da-jian-window-xi-tong"> 本地环境搭建（window系统）</span><a href="#p-ben-di-huan-jing-da-jian-window-xi-tong" class="header-anchor">#</a></h2>
-<p>本地需要你有node环境，还需要git，自行准备。(以下所有npm安装命令均可使用cnpm执行)</p>
-<h3><span id="p-an-zhuang"> 安装</span><a href="#p-an-zhuang" class="header-anchor">#</a></h3>
-<p>安装hexo：</p>
+<h2><span id="ben-di-huan-jing-da-jian-window-xi-tong">本地环境搭建（window系统）</span><a href="#ben-di-huan-jing-da-jian-window-xi-tong" class="header-anchor">#</a></h2><p>本地需要你有node环境，还需要git，自行准备。(以下所有npm安装命令均可使用cnpm执行)</p>
+<h3><span id="an-zhuang">安装</span><a href="#an-zhuang" class="header-anchor">#</a></h3><p>安装hexo：</p>
 <p><code>npm install -g hexo-cli</code></p>
 <p>创建一个文件夹hexoDemo，然后执行以下命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
@@ -119,8 +106,7 @@
 <li>themes</li>
 </ul>
 <p>主题文件夹。Hexo 会根据主题来生成静态页面。具体参考<a href="https://hexo.io/zh-cn/docs/themes.html" target="_blank" rel="noopener">这里</a>。</p>
-<h3><span id="p-kai-shi-shi-yong"> 开始使用</span><a href="#p-kai-shi-shi-yong" class="header-anchor">#</a></h3>
-<ol>
+<h3><span id="kai-shi-shi-yong">开始使用</span><a href="#kai-shi-shi-yong" class="header-anchor">#</a></h3><ol>
 <li>写作 <code>hexo new [layout] &lt;title&gt;</code></li>
 </ol>
 <p>新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。</p>
@@ -149,7 +135,7 @@
 <ol start="3">
 <li>启动服务 <code>hexo server</code></li>
 </ol>
-<p>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/%E3%80%82" target="_blank" rel="noopener">http://localhost:4000/。</a></p>
+<p>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/。" target="_blank" rel="noopener">http://localhost:4000/。</a></p>
 <table>
 <thead>
 <tr>
@@ -189,12 +175,10 @@
 </tr>
 </tbody>
 </table>
-<p>命令可简写为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
-<p>综合2、4两条：<br>
-<code>hexo d -g</code> 和 <code>hexo g -d</code>功能一样，都可以完成生成静态文件并完成部署。</p>
+<p>命令可简写为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure></p>
+<p>综合2、4两条：<br><code>hexo d -g</code> 和 <code>hexo g -d</code>功能一样，都可以完成生成静态文件并完成部署。</p>
 <p>更多指令请点击<a href="https://hexo.io/zh-cn/docs/commands.html" target="_blank" rel="noopener">这里</a></p>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.6.0/katex.min.css">
+
   </div>
 </article>
   </div>
